@@ -137,9 +137,9 @@ void Zmove(unsigned char pos)
    for(n=0; n<10; n++)
    {
     Z_STEP=1;
-    __delay_ms(2);
+    __delay_ms(5);
     Z_STEP=0;
-    __delay_ms(2);
+    __delay_ms(5);
    }
   }
  }
@@ -189,7 +189,7 @@ void ScanUart()
    if( Y_POS != y_pos )
     Ymove(y_pos);
   }
-  else if(z == '2') //else is a two axis move command, but only move if Z axis is down
+  else if(z == '2') //else is a two axis move command, but only move if Z axis is up
   {
    Xmove(x_pos);	//First X then Y
    Ymove(y_pos);
