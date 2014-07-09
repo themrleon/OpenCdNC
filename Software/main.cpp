@@ -156,7 +156,6 @@ int main(void)
 {   
     unsigned int x_offset,y_offset;
     char out[20]="",tmp[20]="";
-    bool first_line=1;
     BYTE rx;
     
     ClosePort();
