@@ -6,6 +6,9 @@ I always wanted a fast way to make PCB prototype before send the project to a fa
 [![](http://img.youtube.com/vi/3wD8tHKAZS0/0.jpg)](https://www.youtube.com/watch?v=3wD8tHKAZS0)
 [![](http://img.youtube.com/vi/hrWGD7YXcFc/0.jpg)](https://www.youtube.com/watch?v=hrWGD7YXcFc)
 
+<br><h2><b>Article</h2></b>
+http://hackaday.com/2014/07/09/cd-drive-cnc-machine-steals-matt-groenings-job-says-ha-ha/
+
 <br><h2><b>Features</h2></b>
 <br>Cheap   - Uses three cd-rom drives, some wood/screws, cheap electronics, wires and any pen!
 <br>Compact - 20x15 cm of size and 35x38 mm of work area (varies from cd-rom), small but great for home use, small projects, SMDs, DIY..
