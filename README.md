@@ -6,8 +6,9 @@ I always wanted a fast way to make PCB prototype before send the project to a fa
 [![](http://img.youtube.com/vi/3wD8tHKAZS0/0.jpg)](https://www.youtube.com/watch?v=3wD8tHKAZS0)
 [![](http://img.youtube.com/vi/hrWGD7YXcFc/0.jpg)](https://www.youtube.com/watch?v=hrWGD7YXcFc)
 
-<br><h2><b>Article</h2></b>
+<br><h2><b>Articles</h2></b>
 http://hackaday.com/2014/07/09/cd-drive-cnc-machine-steals-matt-groenings-job-says-ha-ha/
+http://hackedgadgets.com/2014/07/15/opencdnc-cnc-project-made-from-cd-rom-drives/
 
 <br><h2><b>Features</h2></b>
 <br>Cheap   - Uses three cd-rom drives, some wood/screws, cheap electronics, wires and any pen!
