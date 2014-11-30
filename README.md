@@ -39,7 +39,7 @@
 
 ## How the whole thing works?
 ### Protocol
-`x00000y00000z1` - This all what the firmware understand and need! Just send the X and Y coordinate in 'micrometer' unit and '1' or '2' for Z axis, where 1 = down and 2 = up.
+`x00000y00000z1` - This is all what the firmware understand and need! Just send the X and Y coordinate in 'micrometer' unit and '1' or '2' for Z axis, where 1 = down and 2 = up.
 
 ### Software
 <div align="justify">The software connect to CNC through a serial connection of 9600 kbps, send commands and wait the CNC process (move the motors), when done, CNC will return back a flag to software (an ASCII '*'), and then the software can send the next command.</div>
