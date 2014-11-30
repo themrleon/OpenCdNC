@@ -55,7 +55,7 @@ X013081Y013908D02*
 And what this mean? To print anything you will need use the 'wire' tool or import an image (see below).
 
 ## How to print images
-<div align="justify">First step is convert the image to monochrome bitmap, this can be done with Microsoft Paint, you need reduce the image size too (something between 35x35 and 300x300 pixels would be ok, where less pixels = fast print and script draw time, but low quality). Then at Eagle you must use a script that import this bitmap file and draw the image using the 'wire' tool. The default Eagle's script name is 'import_bmp.ulp', but it draw the image with the 'rectangle' tool (that is useless to my software), so I modified it to draw using the 'wire' tool. Details in the [TUTORIAL](https://github.com/themrleon/OpenCdNC/tree/master/Tutorial) folder.</div>
+<div align="justify">First step is convert the image to monochrome bitmap, this can be done with Microsoft Paint, you need reduce the image size too (something between 35x35 and 300x300 pixels would be ok, where less pixels = fast print and script draw time, but low quality). Then at Eagle you must use a script that import this bitmap file and draw the image using the 'wire' tool. The default Eagle's script name is 'import_bmp.ulp', but it draw the image with the 'rectangle' tool (that is useless to my software), so I modified it to draw using the 'wire' tool. Details in the [LICENSE](https://github.com/themrleon/OpenCdNC/tree/master/Tutorial) folder.</div>
 
 ## License
 See [LICENSE](https://github.com/themrleon/OpenCdNC/blob/master/LICENSE)
