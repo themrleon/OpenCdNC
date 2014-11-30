@@ -1,58 +1,58 @@
-OpenCdNC
-========
-
-I always wanted a fast way to make PCB prototype before send the project to a fabhouse and wait 2 or more months to see the result. This is why i built this CNC, it's made from cd-rom parts and was inspired viewing some similar projects on internet.
+# OpenCdNC
+I always wanted a fast way to make PCB prototype before send the project to a fabhouse and wait 2 or more months to see the result. This is why I built this CNC, it's made from cd-rom parts and was inspired viewing some similar projects on internet.
 
 [![](http://img.youtube.com/vi/3wD8tHKAZS0/0.jpg)](https://www.youtube.com/watch?v=3wD8tHKAZS0)
 [![](http://img.youtube.com/vi/hrWGD7YXcFc/0.jpg)](https://www.youtube.com/watch?v=hrWGD7YXcFc)
 
-<br><h2><b>Articles</h2></b>
-http://hackaday.com/2014/07/09/cd-drive-cnc-machine-steals-matt-groenings-job-says-ha-ha/
-<br>http://hackedgadgets.com/2014/07/15/opencdnc-cnc-project-made-from-cd-rom-drives/
-<br>http://dangerousprototypes.com/2014/07/17/opencdnc-cnc-project-made-from-cd-rom-drives/
-<br>http://www.geekweek.pl/aktualnosci/19815/maszyna-cnc-ze-starych-napedow-cd
+## Articles
+* http://hackaday.com/2014/07/09/cd-drive-cnc-machine-steals-matt-groenings-job-says-ha-ha/
+* http://hackedgadgets.com/2014/07/15/opencdnc-cnc-project-made-from-cd-rom-drives/
+* http://dangerousprototypes.com/2014/07/17/opencdnc-cnc-project-made-from-cd-rom-drives/
+* http://www.geekweek.pl/aktualnosci/19815/maszyna-cnc-ze-starych-napedow-cd
 
-<br><h2><b>Features</h2></b>
-<br>Cheap   - Uses three cd-rom drives, some wood/screws, cheap electronics, wires and any pen!
-<br>Compact - 20x15 cm of size and 35x38 mm of work area (varies from cd-rom), small but great for home use, small projects, SMDs, DIY..
-<br>Functional - Is able to print over paper/PCB to do circuit boards and print images!
-<br>USB     - Native Windows/Linux USB driver support, no serial/parallel port or drivers needed!
-<br>Easy    - Just connect the USB cable to PC and supply the step motor driver with +5 VDC and GND
-<br>Eagle   - Support one of the most famous PCB software design Cadsoft Eagle PCB (with limitations)
-<br>Gerber  - Support GERBER RS274X protocol (with limitations)
-<br>Precise - 0.147 mm virtual precision (varies from cd-rom, step motor driver, frame build quality..) 
-<br>Code    - Small, clean and simple code. You can easily change/adapt to your own project!
+## Features
+* Cheap   - Just three cd-rom drives, wood, screws/bolts, cheap electronics, wires and any pen
+* Compact - 20x15 cm of size and 35x38 mm of work area (varies from cd-rom), great for home use, small projects and SMDs
+* Functional - Print over paper/copper to do circuit boards or just print images
+* USB     - Native Windows/Linux USB driver support, no serial/parallel port or drivers needed
+* Easy    - Just connect the USB cable to PC and supply the step motor driver with +5 VDC and GND
+* Eagle   - Support one of the most popular PCB software design Cadsoft Eagle PCB (with limitations)
+* Gerber  - Support GERBER RS274X protocol (with limitations)
+* Precise - 0.147 mm virtual precision (varies from cd-rom motors, step motor driver, frame build quality...) 
+* Code    - Small, clean and simple code. You can easily change/adapt to your own project
 
-<h1><b>What is used?</b></h1>
-<b>Hardware</b>
-<br>1x Microchip PIC16F628A
-<br>3x Easy Driver v4.4 Step Motor Driver
-<br>1x PL2303HX USB-Serial TTL Converter
-<br>3x CD-ROM Drives
-<br>Some wood/screws for frame and wires for electronics
+## What is used?
+### Hardware
+* 1x Microchip PIC16F628A
+* 3x Easy Driver v4.4 Step Motor Driver
+* 1x PL2303HX USB-Serial TTL Converter
+* 3x CD-ROM Drives
+* Some wood/screws for frame and wires for electronics
 
-<br><b>Software</b>
-<br>Windows 7 x64 environment
-<br>Bloodshed Dev-C++ 4.9.9.2
-<br>Microchip MPlab 8.92
-<br>Hitech PICC Lite compiler
-<br>Cadsoft Eagle PCB 6.6.0
-<br>Windows MS Paint!
+### Software
+* Microsoft Windows 7
+* Bloodshed Dev-C++ 4.9.9.2
+* Microchip MPlab 8.92
+* Hitech PICC Lite compiler
+* Cadsoft Eagle PCB 6.6.0
+* Windows MS Paint!
 
-<h1><b>How the whole thing works?</b></h1>
-<b>Protocol</b>
-<br>x00000y00000z1 - yeah, that's all the firmware understand and need! You just send the X and Y coordinate in 'micrometer' unit. For Z axis just send '1' or '2', where 1 = down and 2 = up. Details about the protocol on firmware source code comments.
+## How the whole thing works?
+### Protocol
+`x00000y00000z1` - this all what the firmware understand and need! Just send the X and Y coordinate in 'micrometer' unit and '1' or '2' for Z axis, where 1 = down and 2 = up.
 
-<br><b>Software</b>
-<br>The software connect to CNC through a serial connection of 9600 kbps, send commands and wait the CNC process (move the motors), when done, CNC will return back a flag to software (an ASCII '*'), and then the software can send the next command.
+### Software
+The software connect to CNC through a serial connection of 9600 kbps, send commands and wait the CNC process (move the motors), when done, CNC will return back a flag to software (an ASCII '*'), and then the software can send the next command.
 
-<br><b>Eagle</b>
-<br>The software was built to work with files generated by eagle CAM processor using the 'GERBER_RS274X' as device. The limitation here is in the gerber rs274x protocol, i added support just to 'wire' tool on Eagle toolbox, that generate these type of gerber commands:
-<br>X000100Y000100D02*
-<br>X000100Y013874D01*
-<br>X013874Y013874D01*
-<br>X013081Y013908D02*
-<br>As you can see, to print anything you will need use the 'wire' tool or import an image(see below).
+### Eagle
+The software was built to work with files generated by eagle CAM processor using the 'GERBER_RS274X' as device. The limitation here is in the gerber rs274x protocol, I added support just to 'wire' tool of Eagle toolbox, that generate these type of gerber commands:
+```
+X000100Y000100D02*
+X000100Y013874D01*
+X013874Y013874D01*
+X013081Y013908D02*
+```
+And what this mean? To print anything you will need use the 'wire' tool or import an image (see below).
 
-<br><b>How to print images</b>
-<br>First you need convert your image to monochrome bitmap, this can be done using Windows 'MS Paint', you need reduce the image size too (something between 35x35 and 300x300 pixels is recommended, where less pixels = fast print and script draw time, but low quality). Now at Eagle you must use an script that import the bitmap file and draw the image using the 'wire' tool. The default Eagle's script name is 'import_bmp.ulp', but it draw the image with the 'rectangle' tool (that is useless to my software), so i modified it to draw using the 'wire' tool.
+### How to print images
+First step is convert the image to monochrome bitmap, this can be done with Microsoft Paint, you need reduce the image size too (something between 35x35 and 300x300 pixels would be ok, where less pixels = fast print and script draw time, but low quality). Then at Eagle you must use a script that import this bitmap file and draw the image using the 'wire' tool. The default Eagle's script name is 'import_bmp.ulp', but it draw the image with the 'rectangle' tool (that is useless to my software), so I modified it to draw using the 'wire' tool. Details in the tutorial folder.
