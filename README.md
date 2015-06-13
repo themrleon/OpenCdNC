@@ -5,6 +5,7 @@
 [![](http://img.youtube.com/vi/hrWGD7YXcFc/0.jpg)](https://www.youtube.com/watch?v=hrWGD7YXcFc)
 
 ## Articles
+* http://www.l3oc.com/2015/06/opencdnc-cnc-made-from-cdrom-parts.html
 * http://hackaday.com/2014/07/09/cd-drive-cnc-machine-steals-matt-groenings-job-says-ha-ha/
 * http://hackedgadgets.com/2014/07/15/opencdnc-cnc-project-made-from-cd-rom-drives/
 * http://dangerousprototypes.com/2014/07/17/opencdnc-cnc-project-made-from-cd-rom-drives/
